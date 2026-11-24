@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+a {
+  color: #222;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 40px;
+  background: #111;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 25px;
+}
+
+.menu a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.carrossel {
+  position: relative;
+  height: 500px;
+  background: #333;
+}
+
+.foto-vazia {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background: #555;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.carrossel .foto-vazia {
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
+
+.carrossel-texto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+.carrossel-texto h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.carrossel-texto p {
+  font-size: 18px;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.seta:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.esquerda {
+  left: 15px;
+}
+
+.direita {
+  right: 15px;
+}
+
+.bolinhas {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.bolinhas span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #999;
+  cursor: pointer;
+}
+
+.bolinhas span.ativa {
+  background: #fff;
+}
+
+.secao {
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.secao h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.secao p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.destaque {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  color: #555;
+}
+
+.fundo-cinza {
+  max-width: none;
+  background: #eee;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 320px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-foto {
+  height: 250px;
+}
+
+.card h3 {
+  margin: 15px 15px 8px;
+}
+
+.card p {
+  margin: 0 15px 20px;
+  color: #555;
+}
+
+.lista-contato {
+  list-style: none;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.lista-contato li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 17px;
+}
+
+.rodape {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .cabecalho {
+    padding: 15px 20px;
+    justify-content: center;
+  }
+
+  .menu a {
+    margin: 0 8px;
+  }
+
+  .carrossel {
+    height: 380px;
+  }
+
+  .carrossel-texto h1 {
+    font-size: 32px;
+  }
+
+  .secao {
+    padding: 40px 20px;
+  }
+}
